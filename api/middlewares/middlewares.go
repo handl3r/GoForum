@@ -8,6 +8,6 @@ func TokenAuthMiddleware() gin.HandlerFunc {
 
 }
 
-func CORSMiddleware() gin.HandlerFunc{
+func CORSMiddleware() gin.HandlerFunc {
 
 }
