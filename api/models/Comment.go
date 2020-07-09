@@ -58,7 +58,7 @@ func (comment *Comment) GetCommentsByPost(db *gorm.DB, pid uint64) (*[]Comment, 
 		return &[]Comment{}, err
 	}
 	if len(comments) > 0 {
-		for i, _ := range comments {
+		for i := range comments {
 			err = db.Debug().Model(&User{}).Where("id=?", comments[i].UserID).Take(&comments[i].Author).Error
 			if err != nil {
 				return &[]Comment{}, err
